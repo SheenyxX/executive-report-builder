@@ -1,9 +1,23 @@
-```markdown
-# Executive_Report_Builder
+# Executive Report Builder
 
-Executive_Report_Builder is a Python-based automation tool that generates standardized executive PowerPoint project status reports from structured JSON data.
+> Python-based automation tool that generates standardized executive PowerPoint project status reports from structured JSON data.
 
-It eliminates repetitive manual editing, ensures consistent formatting, and dynamically generates one slide per project using a predefined PowerPoint template.
+Eliminates repetitive manual editing, ensures consistent formatting, and dynamically generates **one slide per project** using a predefined PowerPoint template.
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Project Structure](#project-structure)
+- [Requirements](#requirements)
+- [Template Configuration](#template-configuration)
+- [JSON Structure](#json-structure)
+- [How To Use](#how-to-use)
+- [How It Works](#how-it-works)
+- [Configuration](#configuration)
+- [Suggested Weekly Workflow](#suggested-weekly-workflow)
+- [Future Improvements](#future-improvements)
 
 ---
 
@@ -11,11 +25,13 @@ It eliminates repetitive manual editing, ensures consistent formatting, and dyna
 
 This tool reads structured project data from a JSON file and automatically populates a PowerPoint template with:
 
-- Project title and scope  
-- Assigned user and area  
-- Progress percentage and total days  
-- Observations and risks  
-- Milestones (name, date, progress note, status)
+| Field | Description |
+|---|---|
+| Project title & scope | Name and description of the project |
+| Assigned user & area | Owner and business unit |
+| Progress & days | Completion percentage and elapsed days |
+| Observations & risks | Current notes and blockers |
+| Milestones | Name, date, progress note, and status per milestone |
 
 Each project in the JSON file becomes one slide in the final presentation.
 
@@ -24,7 +40,6 @@ Each project in the JSON file becomes one slide in the final presentation.
 ## Project Structure
 
 ```
-
 executive-report-builder/
 │
 ├── template/
@@ -39,73 +54,62 @@ executive-report-builder/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-
-````
+```
 
 ---
 
 ## Requirements
 
-- Python 3.10+ recommended  
-- A properly configured PowerPoint template  
-- python-pptx library  
-
-Install dependencies:
+- Python 3.10+
+- A properly configured PowerPoint template (see [Template Configuration](#template-configuration))
+- `python-pptx` library
 
 ```bash
 pip install -r requirements.txt
-````
+```
 
 ---
 
-## Template Configuration (Important)
+## Template Configuration
 
-The PowerPoint template must contain named shapes.
+The PowerPoint template must contain **named shapes**. To rename them:
 
-Open PowerPoint → Home → Select → Selection Pane
-Rename the text boxes exactly as follows:
+> PowerPoint → Home → Select → Selection Pane → rename each text box
 
 ### Required Main Fields
 
-* `Project_title`
-* `project_scope_details`
-* `project_user`
-* `project_area`
-* `report_date`
-* `progress_percentage_`
-* `days_total_`
-* `observations_`
-* `risk_`
+| Shape Name | Description |
+|---|---|
+| `Project_title` | Project name |
+| `project_scope_details` | Scope description |
+| `project_user` | Assigned user |
+| `project_area` | Business area |
+| `report_date` | Report date |
+| `progress_percentage_` | Completion % |
+| `days_total_` | Total days |
+| `observations_` | Observations text |
+| `risk_` | Risk text |
 
 ### Milestone Rows
 
-If `MAX_MILESTONES = 5` in `generate.py`, the template must include:
+For each milestone row (up to `MAX_MILESTONES`), add these four shapes:
 
-Row 1:
+| Shape Name | Description |
+|---|---|
+| `milestone_N` | Milestone name |
+| `date_logN` | Milestone date |
+| `status_logN` | Progress note |
+| `statusN` | Status label |
 
-* `milestone_1`
-* `date_log1`
-* `status_log1`
-* `status1`
+Where `N` is the row number (1, 2, 3...).
 
-Row 2:
-
-* `milestone_2`
-* `date_log2`
-* `status_log2`
-* `status2`
-
-And so on, up to the configured `MAX_MILESTONES`.
-
-Shape names are case-sensitive and must match exactly.
+> ⚠️ Shape names are **case-sensitive** and must match exactly.
 
 ---
 
 ## JSON Structure
 
-Create a JSON file inside the `data/` folder.
-
-Example:
+Create a JSON file inside the `data/` folder and populate it with your project data.
 
 ```json
 {
@@ -138,11 +142,11 @@ Example:
 }
 ```
 
-Each project in the `projects` array generates one slide.
+> Each object in the `projects` array generates one slide.
 
 ---
 
-## How To Use (New User Guide)
+## How To Use
 
 ### 1. Clone the Repository
 
@@ -154,14 +158,12 @@ cd executive-report-builder
 ### 2. Create a Virtual Environment
 
 **Windows (PowerShell)**
-
 ```powershell
 python -m venv venv
 venv\Scripts\activate
 ```
 
-**Mac/Linux**
-
+**Mac / Linux**
 ```bash
 python3 -m venv venv
 source venv/bin/activate
@@ -175,13 +177,13 @@ pip install -r requirements.txt
 
 ### 4. Create Your JSON File
 
-Inside the `data/` folder:
+Add a new file inside `data/`:
 
 ```
 data/my_report.json
 ```
 
-Edit it with your project information.
+Fill it with your project information following the [JSON structure](#json-structure) above.
 
 ### 5. Generate the Report
 
@@ -189,57 +191,49 @@ Edit it with your project information.
 python generate.py data/my_report.json
 ```
 
-The final PowerPoint file will be generated inside:
-
-```
-output/
-```
+The final `.pptx` file will be saved inside the `output/` folder.
 
 ---
 
-## How It Works Internally
+## How It Works
 
-1. Loads the PowerPoint template.
-2. Reads structured project data from JSON.
-3. Fills template shapes by name.
-4. Duplicates the template slide for each project.
-5. Applies font adjustments to prevent overflow.
-6. Saves the final presentation in the output folder.
+1. Loads the PowerPoint template
+2. Reads structured project data from the JSON file
+3. Fills each template shape by name
+4. Duplicates the template slide for each project
+5. Applies font adjustments to prevent text overflow
+6. Saves the final presentation to `output/`
 
 ---
 
 ## Configuration
 
-Inside `generate.py`, you can modify:
+Inside `generate.py`, adjust the maximum number of milestone rows to match your template:
 
 ```python
 MAX_MILESTONES = 5
 ```
 
-Adjust this number if your template contains more milestone rows.
-
 ---
 
 ## Suggested Weekly Workflow
 
-1. Update the JSON file with current project status.
-2. Run the generator.
-3. Review the output PPT.
-4. Share with stakeholders.
-5. Commit JSON updates to GitHub to maintain history.
+1. Update the JSON file with current project status
+2. Run the generator
+3. Review the output `.pptx`
+4. Share with stakeholders
+5. Commit the JSON update to GitHub to maintain version history
 
 ---
 
 ## Future Improvements
 
-* Automatic timestamped filenames
-* Multi-user report consolidation
-* PDF export
-* CLI argument enhancements
-* GitHub Actions automation
+- [ ] Automatic timestamped output filenames
+- [ ] Multi-user report consolidation
+- [ ] PDF export
+- [ ] CLI argument enhancements
+- [ ] GitHub Actions automation
 
-Executive_Report_Builder transforms manual executive reporting into a structured, automated workflow.
+---
 
-```
-```
-
+*Executive Report Builder transforms manual executive reporting into a structured, automated workflow.*

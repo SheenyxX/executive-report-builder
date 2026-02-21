@@ -1,0 +1,91 @@
+{
+  "report_date": "2026-02-20",
+  "projects": [
+    {
+      "title": "RPA Ventas Crédito/SAP",
+      "scope": "Automatización mediante RPA del proceso manual en SAP para optimizar tiempos operativos y reducir errores humanos.",
+      "user": "Matías Palermo",
+      "area": "Cobranzas",
+      "progress_percent": 20,
+      "days_total": 8,
+      "observations": [
+        "Pendiente validación final en ambiente productivo.",
+        "Ajustes menores en documento PDD tras revisión con usuario.",
+        "Coordinación con equipo técnico para despliegue."
+      ],
+      "risks": [
+        "Dependencia de aprobación del usuario de negocio.",
+        "Retrasos en disponibilidad del ambiente de pruebas."
+      ],
+      "milestones": [
+        {
+          "milestone": "Levantamiento inicial",
+          "date_log": "FEB 11",
+          "status_log": "Estado: 90%",
+          "status": "En Proceso"
+        },
+        {
+          "milestone": "Desarrollo PDD",
+          "date_log": "FEB 11",
+          "status_log": "Estado: 90%",
+          "status": "En Proceso"
+        },
+        {
+          "milestone": "Aprobación PDD",
+          "date_log": "FEB 27 / MAR 2",
+          "status_log": "Estado: Pendiente",
+          "status": "Pendiente"
+        },
+        {
+          "milestone": "Validación Arquitectura",
+          "date_log": "",
+          "status_log": "Estado: Pendiente",
+          "status": "Pendiente"
+        },
+        {
+          "milestone": "Desarrollo RPA",
+          "date_log": "",
+          "status_log": "Estado: No Iniciado",
+          "status": "Pendiente"
+        }
+      ]
+    },
+
+    {
+      "title": "RPA Gestión Facturación",
+      "scope": "Automatización del proceso de facturación mensual para reducir tiempos de cierre financiero.",
+      "user": "Ana Torres",
+      "area": "Finanzas",
+      "progress_percent": 45,
+      "days_total": 15,
+      "observations": [
+        "Desarrollo en fase avanzada.",
+        "Pruebas unitarias completadas."
+      ],
+      "risks": [
+        "Posible ajuste en reglas de negocio solicitado por el cliente."
+      ],
+      "milestones": [
+        {
+          "milestone": "Análisis de requerimientos",
+          "date_log": "FEB 05",
+          "status_log": "Estado: 100%",
+          "status": "Completo"
+        },
+        {
+          "milestone": "Desarrollo Bot",
+          "date_log": "FEB 10",
+          "status_log": "Estado: 80%",
+          "status": "En Proceso"
+        },
+        {
+          "milestone": "Pruebas QA",
+          "date_log": "",
+          "status_log": "Estado: Pendiente",
+          "status": "Pendiente"
+        }
+      ]
+    }
+
+  ]
+}

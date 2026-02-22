@@ -4,3 +4,4 @@ output/
 *.pyc
 .DS_Store
 Thumbs.db
+git-workflow.md

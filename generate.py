@@ -184,4 +184,4 @@ def generate(json_path: str):
 
 if __name__ == "__main__":
     # Change this to your file name if needed
-    generate("data/2026-02-20.json")
+    generate("data/Andres_Rivas_2026-02-20.json")

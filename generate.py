@@ -125,7 +125,8 @@ def fill_project_slide(slide, report_date: str, project: dict):
     set_lines(slide, "risk_", project.get("risks", []))
 
     # Optional: shrink long text to reduce overflow
-    shrink_font_if_long(slide, "project_scope_details", max_chars=250, start_pt=14, min_pt=12)
+    shrink_font_if_long(slide, "project_title", max_chars=50, start_pt=10, min_pt=9)
+    shrink_font_if_long(slide, "project_scope_details", max_chars=250, start_pt=12, min_pt=10)
     shrink_font_if_long(slide, "observations_", max_chars=220, start_pt=11, min_pt=9)
     shrink_font_if_long(slide, "risk_", max_chars=220, start_pt=11, min_pt=10)
 

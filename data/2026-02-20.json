@@ -3,31 +3,31 @@
   "projects": [
     {
       "title": "RPA Ventas Crédito/SAP",
-      "scope": "Automatización mediante RPA del proceso manual en SAP para optimizar tiempos operativos y reducir errores humanos.",
-      "user": "Matías Palermo",
+      "scope": "Automatizar mediante RPA el proceso manual de Venta Crédito en SAP, optimizando tiempos operativos, reduciendo errores humanos y mejorando la trazabilidad, control y eficiencia del proceso mensual de ejecución y generación de reportes.",
+      "user": "Matias Javier Palma",
       "area": "Cobranzas",
       "progress_percent": 20,
       "days_total": 8,
       "observations": [
-        "Pendiente validación final en ambiente productivo.",
-        "Ajustes menores en documento PDD tras revisión con usuario.",
-        "Coordinación con equipo técnico para despliegue."
+        "Pendiente ejecución final en vivo para validación completa",
+        "Pendiente ajustes de PDD tras validación en vivo",
+        "Pendiente revisión por parte del usuario",
+        "Pendiente aprobación formal del PDD por usuario y equipo técnico"
       ],
       "risks": [
-        "Dependencia de aprobación del usuario de negocio.",
-        "Retrasos en disponibilidad del ambiente de pruebas."
+        "Dependencia de aprobación de usuario de negocio puede impactar cronograma de pruebas."
       ],
       "milestones": [
         {
-          "milestone": "Levantamiento inicial",
-          "date_log": "FEB 11",
-          "status_log": "Estado: 90%",
+          "milestone": "Levantamiento Inicial",
+          "date_log": "FEBRERO 11",
+          "status_log": "Estado: 90% Completado",
           "status": "En Proceso"
         },
         {
           "milestone": "Desarrollo PDD",
-          "date_log": "FEB 11",
-          "status_log": "Estado: 90%",
+          "date_log": "FEBRERO 11",
+          "status_log": "Estado: 90% Completado",
           "status": "En Proceso"
         },
         {
@@ -37,7 +37,7 @@
           "status": "Pendiente"
         },
         {
-          "milestone": "Validación Arquitectura",
+          "milestone": "Validación de Arquitectura",
           "date_log": "",
           "status_log": "Estado: Pendiente",
           "status": "Pendiente"
@@ -45,47 +45,154 @@
         {
           "milestone": "Desarrollo RPA",
           "date_log": "",
-          "status_log": "Estado: No Iniciado",
+          "status_log": "Estado: No iniciado",
           "status": "Pendiente"
         }
       ]
     },
 
     {
-      "title": "RPA Gestión Facturación",
-      "scope": "Automatización del proceso de facturación mensual para reducir tiempos de cierre financiero.",
-      "user": "Ana Torres",
-      "area": "Finanzas",
-      "progress_percent": 45,
-      "days_total": 15,
+      "title": "RPA S ALR 87013019/Ordenes Comprometidas",
+      "scope": "El proyecto busca automatizar mediante RPA la ejecución manual de la transacción SAP S_ALR_87013019, incluyendo ingreso de parámetros, filtros, generación y descarga del reporte.",
+      "user": "Maria Jose Liberona",
+      "area": "Business Intelligence",
+      "progress_percent": 20,
+      "days_total": 8,
       "observations": [
-        "Desarrollo en fase avanzada.",
-        "Pruebas unitarias completadas."
+        "Pendiente ejecución final en vivo para validación completa",
+        "Pendiente ajustes de PDD tras validación en vivo",
+        "Pendiente revisión por parte del usuario",
+        "Pendiente aprobación formal del PDD por usuario y equipo técnico"
       ],
       "risks": [
-        "Posible ajuste en reglas de negocio solicitado por el cliente."
+        "Dependencia de aprobación de usuario de negocio puede impactar cronograma de pruebas."
       ],
       "milestones": [
         {
-          "milestone": "Análisis de requerimientos",
-          "date_log": "FEB 05",
-          "status_log": "Estado: 100%",
-          "status": "Completo"
-        },
-        {
-          "milestone": "Desarrollo Bot",
-          "date_log": "FEB 10",
-          "status_log": "Estado: 80%",
+          "milestone": "Levantamiento Inicial",
+          "date_log": "FEBRERO 11",
+          "status_log": "Estado: 90% Completado",
           "status": "En Proceso"
         },
         {
-          "milestone": "Pruebas QA",
+          "milestone": "Desarrollo PDD",
+          "date_log": "FEBRERO 11",
+          "status_log": "Estado: 90% Completado",
+          "status": "En Proceso"
+        },
+        {
+          "milestone": "Aprobación PDD",
+          "date_log": "FEB 24 / FEB 27",
+          "status_log": "Estado: Pendiente",
+          "status": "Pendiente"
+        },
+        {
+          "milestone": "Validación de Arquitectura",
           "date_log": "",
           "status_log": "Estado: Pendiente",
           "status": "Pendiente"
+        },
+        {
+          "milestone": "Desarrollo RPA",
+          "date_log": "",
+          "status_log": "Estado: No iniciado",
+          "status": "Pendiente"
+        }
+      ]
+    },
+    {
+      "title": "Power BI Dashboard / Columna Tipo Documento",
+      "scope": "El proyecto consiste en incorporar la columna \"Tipo de Documento\" en el dashboard de Power BI (antes de RUT) para mejorar la identificación y validación de pacientes duplicados en el reporte.",
+      "user": "Juan Castro",
+      "area": "Business Intelligence",
+      "progress_percent": 30,
+      "days_total": 4,
+      "observations": [
+        "Pendiente acceso a modelo de datos y esquema",
+        "Pendiente validación de columna Tipo de Documento",
+        "Pendiente añadir nueva columna Tipo de Documento"
+      ],
+      "risks": [
+        "Dependencia de aprobación de usuario de negocio puede impactar cronograma de pruebas."
+      ],
+      "milestones": [
+        {
+          "milestone": "Levantamiento Inicial",
+          "date_log": "FEBRERO 16",
+          "status_log": "Estado: 100% Completado",
+          "status": "En Proceso"
+        },
+        {
+          "milestone": "Solicitud access bd",
+          "date_log": "FEBRERO 18",
+          "status_log": "Estado: 100% Completado",
+          "status": "En Proceso"
+        },
+        {
+          "milestone": "Validación de modelo y esquema de datos",
+          "date_log": "",
+          "status_log": "Estado: Pendiente, revisión",
+          "status": "Pendiente"
+        },
+        {
+          "milestone": "Añadir nueva columna",
+          "date_log": "",
+          "status_log": "Estado: No iniciado",
+          "status": "Pendiente"
+        },
+        {
+          "milestone": "",
+          "date_log": "",
+          "status_log": "",
+          "status": ""
+        }
+      ]
+    },
+    {
+      "title": "Migracion tablas sap postgres a databricks",
+      "scope": "Continuación en el proceso de migración el cual está en un estado actual del 60% y queda el 40% restante por migrar.",
+      "user": "Claudio Arenas",
+      "area": "Infraestructura",
+      "progress_percent": 10,
+      "days_total": 2,
+      "observations": [
+        "En las reuniones se ha socializado cómo está funcionando el proceso y hablamos de puntos críticos para poder continuar la migración de forma correcta."
+      ],
+      "risks": [
+        "Acceso a plataformas"
+      ],
+      "milestones": [
+        {
+          "milestone": "Inducción inicial",
+          "date_log": "FEBRERO 18",
+          "status_log": "Estado: 100% Completado",
+          "status": "Completo"
+        },
+        {
+          "milestone": "Reunión del proceso con Nelson",
+          "date_log": "FEBRERO 19",
+          "status_log": "Estado: 100% Completado",
+          "status": "Completo"
+        },
+        {
+          "milestone": "Acceso a ADF, Catalog Unit",
+          "date_log": "",
+          "status_log": "Estado: Pendiente, revisión",
+          "status": "Pendiente"
+        },
+        {
+          "milestone": "",
+          "date_log": "",
+          "status_log": "",
+          "status": ""
+        },
+        {
+          "milestone": "",
+          "date_log": "",
+          "status_log": "",
+          "status": ""
         }
       ]
     }
-
   ]
 }
